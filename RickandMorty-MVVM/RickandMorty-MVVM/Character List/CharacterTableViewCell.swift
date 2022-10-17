@@ -24,7 +24,9 @@ class CharacterTableViewCell: UITableViewCell {
             case .failure(let error):
                 print(error)
             case .success(let image):
-                self.characterImageImageView.image = image
+                DispatchQueue.main.async {
+                    self.characterImageImageView.image = image
+                }
             }
         }
     }

@@ -14,16 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        APIService.fetchCharacters(with: "Rick") { result in
-            switch result {
-            case .failure(let error):
-                print(error.localizedDescription)
-            case .success(let tld):
-                for character in tld.results {
-                    print(character.name)
-                }
-            }
-        }
+//        APIService.fetchCharacters(with: "Rick") { result in
+//            switch result {
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            case .success(let tld):
+//                for character in tld.results {
+//                    print(character.name)
+//                }
+//            }
+//        }
         return true
     }
 

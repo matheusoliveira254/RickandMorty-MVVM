@@ -20,7 +20,7 @@ struct APIService {
         let characterURL = baseUrl.appendingPathComponent(kCharacter)
         var urlComponents = URLComponents(url: characterURL, resolvingAgainstBaseURL: true)
         let nameFilter = URLQueryItem(name: kName, value: searchTerm)
-        urlComponents?.queryItems?.append(nameFilter)
+        urlComponents?.queryItems = [nameFilter]
         
         guard let finalURL = urlComponents?.url else {completion(.failure(.badURL)); return}
         

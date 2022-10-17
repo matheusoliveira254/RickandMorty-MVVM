@@ -24,7 +24,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="121" id="XBD-fG-gkd" customClass="CharacterTableViewCell" customModule="RickandMorty_MVVM" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCell" rowHeight="121" id="XBD-fG-gkd" customClass="CharacterTableViewCell" customModule="RickandMorty_MVVM" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="94" width="390" height="121"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XBD-fG-gkd" id="9Q9-Fa-4Vc">
@@ -68,19 +68,9 @@
                     <navigationItem key="navigationItem" id="aiu-b0-I77"/>
                     <connections>
                         <outlet property="characterSearchBar" destination="N3M-Jt-tWd" id="4Jm-sO-UKK"/>
-                        <outlet property="searchDisplayController" destination="vDi-rI-I3E" id="9Rz-cd-oLo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCd-UM-Dxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="vDi-rI-I3E">
-                    <connections>
-                        <outlet property="delegate" destination="oLh-CV-ay6" id="KGO-nC-ZCc"/>
-                        <outlet property="searchBar" destination="N3M-Jt-tWd" id="eaP-hh-lc3"/>
-                        <outlet property="searchContentsController" destination="oLh-CV-ay6" id="nuv-4f-Uk8"/>
-                        <outlet property="searchResultsDataSource" destination="oLh-CV-ay6" id="pTl-68-6D5"/>
-                        <outlet property="searchResultsDelegate" destination="oLh-CV-ay6" id="w7u-Sa-Km1"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1226.1538461538462" y="-31.279620853080566"/>
         </scene>
