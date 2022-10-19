@@ -15,21 +15,21 @@ class CharacterListViewModel {
     
     var characters: [Character] = []
     weak var delegate: CharacterListViewModelDelegate?
-    
+    private let service = CharacterSearchService()
     //Dependency Injection
     init(delegate: CharacterListViewModelDelegate) {
         self.delegate = delegate
     }
     
     func fetchCharacters(with name: String) {
-        APIService.fetchCharacters(with: name) { result in
+        service.fetchCharacterList(for: .name(name)) { [weak self] result in
             switch result {
             case .failure(let error):
                 print(error.errorDescription)
             case .success(let tld):
-                self.characters = tld.results
+                self?.characters = tld.results
                 DispatchQueue.main.async {
-                    self.delegate?.updateViews()
+                    self?.delegate?.updateViews()
                 }
             }
         }

@@ -31,6 +31,19 @@ class CharacterListTableViewController: UITableViewController {
         cell.configure(with: character)
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toDetailVC",
+              let indexPath = tableView.indexPathForSelectedRow,
+              let destination = segue.destination as? CharacterDetailViewController,
+        let cell = sender as? CharacterTableViewCell else {return}
+        let image = cell.characterImageImageView.image
+        
+        let character = viewModel.characters[indexPath.row]
+        destination.configure(with: character, and: image)
+    }
+    
+    
 }//End of Class
 
 extension CharacterListTableViewController: CharacterListViewModelDelegate {
