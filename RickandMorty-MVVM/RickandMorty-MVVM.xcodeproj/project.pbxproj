@@ -21,6 +21,9 @@
 		A1D2301028FF0997004A0BD7 /* CharacterSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2300F28FF0997004A0BD7 /* CharacterSearchService.swift */; };
 		A1D2301228FF11DA004A0BD7 /* RMEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2301128FF11DA004A0BD7 /* RMEndpoint.swift */; };
 		A1D2301729005A74004A0BD7 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2301629005A74004A0BD7 /* CharacterDetailViewController.swift */; };
+		A1D2301A29006B0E004A0BD7 /* ServiceRequestImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D2301929006B0E004A0BD7 /* ServiceRequestImageView.swift */; };
+		A1D230282901AAE1004A0BD7 /* CharacterDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D230262901AAE1004A0BD7 /* CharacterDetail.storyboard */; };
+		A1D2302A2901AAFF004A0BD7 /* CharacterList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D230292901AAFF004A0BD7 /* CharacterList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		A1D2300F28FF0997004A0BD7 /* CharacterSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSearchService.swift; sourceTree = "<group>"; };
 		A1D2301128FF11DA004A0BD7 /* RMEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEndpoint.swift; sourceTree = "<group>"; };
 		A1D2301629005A74004A0BD7 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		A1D2301929006B0E004A0BD7 /* ServiceRequestImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestImageView.swift; sourceTree = "<group>"; };
+		A1D230272901AAE1004A0BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "RickandMorty-MVVM/Storyboards/Base.lproj/CharacterDetail.storyboard"; sourceTree = "<group>"; };
+		A1D230292901AAFF004A0BD7 /* CharacterList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CharacterList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 				A1D22FD928FDDB21004A0BD7 /* CharacterListViewModel.swift */,
 				A1D22FD428FDCBF3004A0BD7 /* CharacterListTableViewController.swift */,
 				A1D22FD628FDCC0E004A0BD7 /* CharacterTableViewCell.swift */,
+				A1D2301929006B0E004A0BD7 /* ServiceRequestImageView.swift */,
+				A1D230292901AAFF004A0BD7 /* CharacterList.storyboard */,
 			);
 			path = "Character List";
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				A1D2301629005A74004A0BD7 /* CharacterDetailViewController.swift */,
+				A1D230262901AAE1004A0BD7 /* CharacterDetail.storyboard */,
 			);
 			path = "Character Detail";
 			sourceTree = "<group>";
@@ -198,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1D22FC328FDB74A004A0BD7 /* LaunchScreen.storyboard in Resources */,
+				A1D230282901AAE1004A0BD7 /* CharacterDetail.storyboard in Resources */,
 				A1D22FC028FDB74A004A0BD7 /* Assets.xcassets in Resources */,
+				A1D2302A2901AAFF004A0BD7 /* CharacterList.storyboard in Resources */,
 				A1D22FBE28FDB748004A0BD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +229,7 @@
 				A1D22FDA28FDDB21004A0BD7 /* CharacterListViewModel.swift in Sources */,
 				A1D22FD528FDCBF3004A0BD7 /* CharacterListTableViewController.swift in Sources */,
 				A1D22FB728FDB748004A0BD7 /* AppDelegate.swift in Sources */,
+				A1D2301A29006B0E004A0BD7 /* ServiceRequestImageView.swift in Sources */,
 				A1D2301028FF0997004A0BD7 /* CharacterSearchService.swift in Sources */,
 				A1D2301228FF11DA004A0BD7 /* RMEndpoint.swift in Sources */,
 				A1D22FB928FDB748004A0BD7 /* SceneDelegate.swift in Sources */,
@@ -241,6 +253,14 @@
 				A1D22FC228FDB74A004A0BD7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A1D230262901AAE1004A0BD7 /* CharacterDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1D230272901AAE1004A0BD7 /* Base */,
+			);
+			name = CharacterDetail.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

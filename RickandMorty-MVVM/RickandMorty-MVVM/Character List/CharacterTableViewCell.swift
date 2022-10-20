@@ -9,8 +9,13 @@ import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var characterImageImageView: UIImageView!
+    @IBOutlet weak var characterImageImageView: ServiceRequestImageView!
     @IBOutlet weak var characterNameLabel: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        characterImageImageView.image = nil
+    }
     
     private let apiService = APIService()
     //Helper Function
@@ -27,17 +32,6 @@ class CharacterTableViewCell: UITableViewCell {
     
     func fetchImage(for character: Character) {
         guard let imageURL = URL(string: character.imageString) else {return}
-        let request = URLRequest(url: imageURL)
-        apiService.perform(request) { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error.errorDescription)
-            case .success(let data):
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-                    self?.characterImageImageView.image = image
-                }
-            }
-        }
+        characterImageImageView.fetch(using: imageURL)
     }
 }
